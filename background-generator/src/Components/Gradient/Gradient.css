@@ -1,0 +1,35 @@
+h1 {
+  text-align: center;
+  justify-content: center;
+}
+.colorPicker {
+  padding: 2rem 0;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.colorPicker h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.colorPicker-btn {
+  display: flex;
+  gap: 1rem;
+}
+.colorPicker-btn input {
+  border: none;
+}
+.generate {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.generate button {
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
