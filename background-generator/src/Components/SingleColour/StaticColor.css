@@ -1,0 +1,71 @@
+.StaticColor {
+  height: 100vh;
+}
+
+.colorPicker {
+  padding: 2rem 0;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.colorPicker h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.colorPicker-btn {
+  display: flex;
+  gap: 1rem;
+}
+.colorPicker-btn input {
+  border: none;
+}
+.StaticColorSpace {
+  margin: 0 auto;
+  height: 15rem;
+  width: 30rem;
+  border: 0.1rem solid black;
+}
+.generate {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+svg {
+  padding: 0 0.3rem;
+  color: #fff;
+}
+button:hover {
+  transform: scale(1.1);
+}
+.gradientButton {
+  position: absolute;
+  right: 5rem;
+  bottom: 2rem;
+}
+
+.gradientButton button a {
+  color: #fff;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+.GradBtn,
+.StaticGenerateBtn {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1rem;
+  padding: 0.5rem 0.7rem;
+  color: #fff;
+  border: none;
+  background-color: #bf4a4a;
+  box-shadow: 10px 10px 14px 1px rgba(00, 00, 00, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.StaticCodeHighlighter {
+  margin: 0 auto;
+  width: 20%;
+}

@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react';
-import { useState } from "react";
+import React from 'react';
+import { useState, useEffect } from "react";
 import randomcolor from 'randomcolor';
+import bg_vdo from '../../Images/GradientBackgroundVideo.mp4';
 
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaintRoller, faRocket } from '@fortawesome/free-solid-svg-icons';
 
 import "./Gradient.css";
 
@@ -11,11 +14,12 @@ function Gradient() {
     const [color1, setColor1] = useState(randomcolor());
     const [color2, setColor2] = useState(randomcolor());
     const [colorCode, setColorCode] = useState('');
+    const displayColor = `background: ${colorCode};`;
 
     useEffect(() => {
         const gradient = `linear-gradient(to right, ${color1} , ${color2} )`;
         setColorCode(gradient);
-        document.body.style.background = gradient;
+        document.getElementById('GradientColorSpace').style.background = gradient;
     }, [color1, color2]);
 
     const changeColor = (e) => {
@@ -32,8 +36,11 @@ function Gradient() {
         setColor2(randomcolor());
     };
     return (
-        <div>
-            <h1>Create Gradient Color Background</h1>
+        <div className='Gradient' id='Gradient'>
+
+            <video autoPlay loop muted className="bg-vdo" src={bg_vdo} />
+
+            <h1>GRADIENT BACKGROUND</h1>
             <div className='colorPicker'>
                 <h3>Select your colors:</h3>
                 <div className='colorPicker-btn'>
@@ -44,14 +51,19 @@ function Gradient() {
                 </div>
             </div>
 
+            <div className='GradientColorSpace' id='GradientColorSpace'></div>
+
             <div className='generate'>
-                <button className='Generate-btn' onClick={RandomColor}>Generate Random</button>
+                <button className='GradientGenerateBtn' onClick={RandomColor}><FontAwesomeIcon icon={faRocket} /> Generate Random</button>
             </div>
 
-            <div>
-                <SyntaxHighlighter language="css" style={docco}>
-                    {colorCode}
+            <div className='code-highlighter'>
+                <SyntaxHighlighter language="css" >
+                    {displayColor}
                 </SyntaxHighlighter>
+            </div>
+            <div className='staticButton'>
+                <button className='StaticBtn'> <a href='/'><FontAwesomeIcon icon={faPaintRoller} beat /> Select Static</a> </button>
             </div>
         </div>
     );

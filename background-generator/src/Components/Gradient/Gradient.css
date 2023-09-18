@@ -1,6 +1,5 @@
-h1 {
-  text-align: center;
-  justify-content: center;
+.Gradient {
+  height: 100vh;
 }
 .colorPicker {
   padding: 2rem 0;
@@ -21,15 +20,57 @@ h1 {
 .colorPicker-btn input {
   border: none;
 }
+.GradientColorSpace {
+  margin: 0 auto;
+  height: 15rem;
+  width: 30rem;
+  border: 0.1rem solid black;
+}
 .generate {
   display: flex;
   text-align: center;
   justify-content: center;
 }
 
-.generate button {
+.Generate-btn {
+  margin: 1rem;
   font-size: 1rem;
   padding: 0.3rem 0.5rem;
-  border: 1px solid black;
   border-radius: 1rem;
+  cursor: pointer;
+}
+svg {
+  padding: 0 0.3rem;
+  color: #000000;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+.staticButton {
+  position: absolute;
+  right: 5rem;
+  bottom: 2rem;
+}
+.staticButton button {
+  border: none;
+}
+.staticButton button a {
+  color: #fff;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+.GradientGenerateBtn,
+.StaticBtn {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1rem;
+  padding: 0.5rem 0.7rem;
+  color: #fff;
+  border: none;
+  background-color: #dbd44e;
+  box-shadow: 10px 10px 14px 1px rgba(00, 00, 00, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
